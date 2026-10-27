@@ -76,17 +76,42 @@
 # 1.5.2
 # 1. neither of b,c,d
 # 2. t will be unpacked and x,y,z will be assigned the values found in t
-# 3. yeses = {"yes", "yeah", "jop", "ok"}; def ask(answ): if answ in yeses: print("you answered yes");
-# 4. set("string")
-# 5. set([1,1,2,2,3,3])
 
 
-    
-def createSet(string):
-    mySet = set()
-    for c in string:
-        mySet.add(c)
-    print(mySet)
+# 1.5.3
+# 1. yeses = {"yes", "yeah", "jop", "ok"}; def ask(answ): if answ in yeses: print("you answered yes");
+# 2. set("string")
+# 3. set([1,1,2,2,3,3])
 
-createSet("alexander")
-print(set([1,2,3,4,5,6,6,6,6]))
+
+# 1.5.4
+# 1. x = ["one","two","three"]; for e in x: print(e);
+# 2. x = {1:"hej", 2:"hello", 3:"wow"}; for key, value in x.items(): print(f"{key}:{value}");
+
+
+# 1.5.5
+# 1. if 20 <= age <= 65: print("Vad jobbar du med?")
+# 2. 'and'
+
+
+# 1.5.6
+# 1. a) TRUE, b) FALSE, c) TRUE, d) FALSE, e) TRUE
+
+
+# 1.6.1
+# 1. 
+from prog import getLotto
+
+print(getLotto())
+
+
+# 1.7.1
+# 1. It replaces the empty brackets with the values foud in the parentheses from .format()
+
+
+# 1.7.2
+# 1.
+
+with open("Lab_1/texts.txt", "r") as file:
+    for line in file:
+        print(line.strip())

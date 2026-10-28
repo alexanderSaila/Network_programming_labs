@@ -5,8 +5,6 @@ def fibonacci(n):
         yield previousNum
         previousNum, nextNum = nextNum, previousNum+nextNum
 
-count = 1000000
-a = fibonacci(count)
 
-for i in range(count):
-    print(a.__next__())
+for i in fibonacci(1000000):
+    print(i)

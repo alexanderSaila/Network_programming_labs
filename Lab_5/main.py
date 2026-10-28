@@ -6,20 +6,19 @@ myPort = 60003
 def gameLoop():
     while True:
         round = controller.playRound()
-        print(round[1])
-        playerScore = round[0][0]
-        opponentScore = round[0][1]
+        print("\n", round[0])
+        playerScore = round[1][0]
+        opponentScore = round[1][1]
+
         if playerScore > 9:
             result = "YOU WON!!"
             break
         elif opponentScore > 9:
             result = "YOU LOST :("
             break
-    gameEnd(result)
 
-
-def gameEnd(result):
-    print(f"{result}\n Your score:{playerScore} vs your opponents score:{opponentScore}")
+    print(f"{result}\nYour score:{playerScore} vs your opponents score:{opponentScore}")
+    
 
 
 while True:

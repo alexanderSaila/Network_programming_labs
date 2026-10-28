@@ -21,6 +21,6 @@ class Controller:
         self._server.send(playerMove)
         opponentMove = self._server.receive()
 
-        return (self._game.getScoring(), self._game.playRound(playerMove, opponentMove))
+        return (self._game.playRound(playerMove, opponentMove), self._game.getScoring())
 
 

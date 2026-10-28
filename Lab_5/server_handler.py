@@ -37,8 +37,10 @@ class ServerHandler:
     
 
     def send(self, string):
-        self._connection.send(string.encode("utf-8"))
+        barr = bytearray(string, "utf-8")
+        self._connection.send(barr)
     
 
     def receive(self):
-        return self._connection.recv(1024).decode("utf-8").strip()
+        barr = self._connection.recv(1024)
+        return barr.decode("utf-8").strip()

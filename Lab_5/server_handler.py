@@ -44,3 +44,7 @@ class ServerHandler:
     def receive(self):
         barr = self._connection.recv(1024)
         return barr.decode("utf-8").strip()
+
+
+    def close(self):
+        self._connection.close()

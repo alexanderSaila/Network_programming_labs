@@ -18,6 +18,7 @@ def gameLoop():
             break
 
     print(f"{result}\nYour score:{playerScore} vs your opponents score:{opponentScore}")
+    controller.closeGame()
     
 
 

@@ -23,4 +23,8 @@ class Controller:
 
         return (self._game.playRound(playerMove, opponentMove), self._game.getScoring())
 
+    
+    def closeGame(self):
+        self._server.close()
+
 

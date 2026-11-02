@@ -17,7 +17,7 @@ class ServerHandler:
     def createServer(self):
         print(f"Opening port: {self._port}")
         sock = socket.socket()
-        sock.bind(("", self._port))
+        sock.bind(("127.0.0.1", self._port))
         
         sock.listen(1)
         print("wait for other player..")

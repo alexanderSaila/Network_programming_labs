@@ -1,5 +1,5 @@
 def fibonacci(n):
-    previousNum = 0
+    previousNum = 1
     nextNum = 1
     while previousNum < n:
         yield previousNum

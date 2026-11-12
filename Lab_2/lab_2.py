@@ -18,19 +18,29 @@ def loadDictionary():
 
 
 def printTopScore(amount):
-    # create an empty list, that will be used as a min heap, in order store the top scorers
+
     minHeap = []
     
     for person, score in people.items():
 
+        # check if people share scores already in the heap.
+        foundScore = False
+        for existingScore, personList in minHeap:
+            if score == existingScore:
+                personList.append(person)
+                foundScore = True
+                break
+        if foundScore:
+            continue
+
         # while my heap size is not yet filled, just add the entry.
         if len(minHeap) < amount:
-            heapq.heappush(minHeap, (score, person))
+            heapq.heappush(minHeap, (score, [person]))
         else:
             
             # only replace entries if we encounter a higher score
             if score > minHeap[0][0]:
-                heapq.heapreplace(minHeap, (score, person))
+                heapq.heapreplace(minHeap, (score, [person]))
         
     # print out all the players in descending order
     for score, person in sorted(minHeap, reverse=True):

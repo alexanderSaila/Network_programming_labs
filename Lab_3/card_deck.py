@@ -6,7 +6,6 @@ class CardDeck:
     
     def __init__(self):
         self.reset()
-        self.shuffle()
     
     
     def shuffle(self):
